@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica,sans-serif;
+    --secondary-font: Mooli, san-serif;
+    }
+
+body{
+    margin: 0px;
+    overflow-x:hidden;
+}
+
+footer{
+    background-color: var(--primary-color);
+    padding: 10px 0px 10px 10%;
+    color: var(--text-light);
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    margin: 0;
+    font-family: var(--secondary-font);
+    text-align: center;
+    color: var(--text-light);
+    display:flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    font-family: var(--secondary-font);
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Show menu items by default on larger screens */
+ul {
+    display: flex;
+}
+
+/* Hide menu items on small screens */
+.hide {
+    display: none;
+}
+
+ul li {
+    padding: 5px 10px; /* Add padding for touch targets */
+}
+
+a{
+    color: var(--text-light);
+}
+
+h3 {
+    font-family: var(--secondary-font);
+    color: var(--text-dark);
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+figure {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling - for menu button */
+#menuButton {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    display: none;
+    font-size: 18px;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+#menuButton:focus {
+    outline: 2px solid var(--accent-color); /* Add focus outline to menu button */
+}
+
+/* Make gallery responsive for medium screens */
+@media (max-width: 1000px) and (min-width: 700px) {
+    section {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+
+    .viewer{
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+/* Make gallery responsive for smaller screens */
+@media (max-width: 700px) {
+    section {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+
+    ul {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: flex-start; /* Align items to start for better appearance */
+        display: none; /* Hide by default on small screens */
+    }
+
+    /* Show menu button on small screens */
+    #menuButton {
+        display: block;
+    }
+
+    /* Show menu items when button is clicked */
+    ul.show {
+        display: flex; /* Show menu items when toggled */
+    }
+}
