@@ -1,0 +1,30 @@
+GitHub setup:
+-------------
+- see https://byui-cit.github.io/learning-modules/modules/general/hosting-git-gihub/ponder1/
+1. Install Git (if not already done)
+2. Run the following git commands:
+
+	git --version	< verify if you have git installed
+	git config --global user.name "victorb1962"
+	git config --global user.email "victorb62@byui.edu"
+
+3. Sign up for a GitHub Account (if not already done)
+
+
+Course Repository & Enable GitHub Pages:
+---------------------------------------------
+- see https://wdd131.netlify.app/prove/setup/
+4. Create GitHub repository: WDD131
+5. Create index.html, styles.css
+6. Enable GitHub Pages (for the repository) <<<<<<<
+
+	• Open github.com in your browser and login. 
+	• Find the new wdd131 repository that we just created and click on it. 
+	• Goto Settings, then scroll down until you see the Pages section. Click on that. 
+	• Find the section that mentions Branches. There should be a drop down that says "none" and a save button. 
+	• Switch the dropdown to "main" and click save.
+
+It might take a couple of minutes, but you should see a URL appear right under the title: "Github Pages". You might need to refresh the page. Copy this link. This will be the URL that you will access your site through, and will be used to turn in your work.
+
+URL: https://victorb1962.github.io/WDD131/
+
