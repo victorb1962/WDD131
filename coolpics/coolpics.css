@@ -1,65 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
 :root {
     --primary-color: #52489c;
     --secondary-color: #59c3c3;
     --accent-color: #f45b69;
     --text-dark: #333;
     --text-light: #ebebeb;
-    --primary-font: Arial, Helvetica,sans-serif;
-    --secondary-font: Mooli, san-serif;
-    }
-
-body{
-    margin: 0px;
-    overflow-x:hidden;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: Mooli, sans-serif;
 }
 
-footer{
-    background-color: var(--primary-color);
-    padding: 10px 0px 10px 10%;
-    color: var(--text-light);
-}
-
-nav {
-    background-color: var(--primary-color);
-    padding: 10px 0;
+/* Global Styles */
+body {
     margin: 0;
-    font-family: var(--secondary-font);
-    text-align: center;
-    color: var(--text-light);
-    display:flex; 
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    overflow-x: hidden;
+    font-family: var(--primary-font);
 }
 
-ul {
-    padding: 0;
-    margin: 0;
-    font-family: var(--secondary-font);
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Show menu items by default on larger screens */
-ul {
-    display: flex;
-}
-
-/* Hide menu items on small screens */
-.hide {
-    display: none;
-}
-
-ul li {
-    padding: 5px 10px; /* Add padding for touch targets */
-}
-
-a{
+a {
     color: var(--text-light);
 }
 
@@ -69,28 +27,41 @@ h3 {
     text-align: center;
 }
 
-img {
-    max-width: 100%;
-    object-fit: cover;
+/* Navigation */
+nav {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    text-align: center;
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-figure {
-    width: 100%;
-    height: 100%;
-}
-
-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+ul {
+    padding: 0;
+    margin: 0;
+    font-family: var(--secondary-font);
+    list-style: none;
+    display: flex;
     gap: 10px;
-    width: 100%;
-    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Styling - for menu button */
+ul li {
+    padding: 5px 10px;
+}
+
+/* Hide menu items on small screens */
+ul.hide {
+    display: none;
+}
+
+/* Menu Button */
 #menuButton {
     background-color: transparent;
+    font-family: var(--secondary-font);
     border: none;
     padding: 10px;
     margin-top: 10px;
@@ -101,16 +72,86 @@ section {
 }
 
 #menuButton:focus {
-    outline: 2px solid var(--accent-color); /* Add focus outline to menu button */
+    outline: 2px solid var(--accent-color);
 }
 
-/* Make gallery responsive for medium screens */
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    padding: 10px 0 10px 10%;
+    color: var(--text-light);
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+figure {
+    width: 100%;
+    height: 100%;
+}
+
+/* Image Viewer */
+.viewer {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.viewer img {
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: 2px solid var(--primary-color);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-viewer {
+    color: var(--text-light);
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    margin: 10px;
+}
+
+/* Responsive Design */
+
+/* Medium Screens (700px - 1000px) */
 @media (max-width: 1000px) and (min-width: 700px) {
-    section {
-        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .viewer{
+    .viewer {
         top: 0;
         left: 0;
         bottom: 0;
@@ -118,25 +159,30 @@ section {
     }
 }
 
-/* Make gallery responsive for smaller screens */
+/* Small Screens (Below 700px) */
 @media (max-width: 700px) {
-    section {
-        grid-template-columns: 1fr; /* Single column for mobile */
+    .gallery {
+        grid-template-columns: 1fr;
     }
 
     ul {
-        flex-direction: column; /* Stack menu items vertically */
-        align-items: flex-start; /* Align items to start for better appearance */
-        display: none; /* Hide by default on small screens */
+        flex-direction: column;
+        align-items: flex-start;
+        display: none;
     }
 
-    /* Show menu button on small screens */
     #menuButton {
         display: block;
     }
 
-    /* Show menu items when button is clicked */
     ul.show {
-        display: flex; /* Show menu items when toggled */
+        display: flex;
+    }
+
+    .viewer {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
     }
 }

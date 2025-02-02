@@ -7,7 +7,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Cool Pics</title>
 		<link rel="stylesheet" href="coolpics.css">
-		<script src="coolpics.js"></script>
 	</head>
 
 	<body>
@@ -24,6 +23,7 @@
 				</ul>
 			</nav>
 		</header>
+
 		<main>
 			<h3>Current Work</h3>
 			<section class="gallery">
@@ -37,9 +37,15 @@
 				<figure><img src="norris-sm.jpeg" alt="picture"></figure>
 				<figure><img src="norris-sm.jpeg" alt="picture"></figure>
 			</section>
+			<div class="hide">
+				<button class="close-viewer">X</button>
+				<img src="" alt="Image Viewer" id="viewerImage">
+			</div>
 		</main>
+
 		<footer>
 			©2023 Not a real site 😀
 		</footer>
+		<script src="coolpics.js"></script>
 	</body>
 </html>
