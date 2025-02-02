@@ -54,7 +54,7 @@ ul li {
 }
 
 /* Hide menu items on small screens */
-ul.hide {
+.hide {
     display: none;
 }
 
