@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+:root {
+    --gold-color: #EFC69B;
+    --red-color: #AF1B3F;
+    --dark-color: #473144;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --body-font: Arial, Helvetica, sans-serif;
+    --headline-font: Lora, Impact, serif;
+}
+
+/* General styling */
+body {
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+}
+
+/* ====== NAVIGATION GRID ====== */
+nav{
+    display: flex;
+    justify-content: right;
+    border: solid 1px var(--gold-color);
+    padding: 15px;
+    padding-right: 80px;
+    gap:20px;
+}
+
+nav a{
+    color: var(--red-color);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav > ul {
+    display: grid;
+    grid-template-columns: auto auto auto; /* 3 columns */
+    gap: 10px; /* Adds space between items */
+    justify-content: end; /* Aligns the grid to the right */
+    justify-items: end; /* Aligns the items inside each grid cell */
+    list-style: none;
+    padding: 0;
+}
+
+nav > ul li {
+    padding: 10px;
+}
+
+/* ====== MAIN CONTENT GRID ====== */
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* Books take 3/4, Filters take 1/4 */
+    gap: 20px;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    height: 100%;
+    gap: 20px; /* Space between books */
+}
+
+/* ====== BOOK GRID ====== */
+.book {  /* Left and Center panels */
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.book-info {  /* Left panel */
+    flex: 1;
+    padding: 10px;
+    margin: 5px;
+    text-align: right;
+    font-size: 20px;
+    border-right: 1px solid var(--gold-color);
+}
+
+book-info p {
+    margin: 5px 0; /* Add some space between the paragraphs */
+    margin-bottom: 100px;
+}
+
+.book-main {  /* Center panel */
+    padding: 20px;
+}
+
+.book-image {
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+header h1 {
+    font-family: var(--headline-font);
+    text-align: center;
+    font-size: 40px;
+    margin: 40px 0px;
+}
+
+h2 {
+    font-family: var(--headline-font);
+    text-align: center;
+    font-size: 30px;
+    color: var(--red-color);
+}
+
+h3 {
+    text-align: left;
+    font-size: 15px;
+    text-decoration: none;
+    margin-bottom: 60px;
+    font-weight: normal;
+}
+
+h4{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 40px;
+    color: var(--red-color);
+}
+
+.separator {
+    width: 1px; /* Width of the separator line */
+    background-color: var(--gold-color); /* Color of the line */
+    margin: 0 10px; /* Space around the separator */
+}
+
+.spaced {
+    margin: 5px 0; /* Add some space between the paragraphs */
+    margin-top: 30px;
+}
+
+/* Filters section styling */
+.filters {
+    border: 1px solid var(--gold-color);
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 8px;
+}
+
+/* Template styles */
+.skiptocontent a {
+	padding:6px;
+	position: absolute;
+	top:-40px;
+	left:0px;
+	color:white;
+	border-right:1px solid white;
+	border-bottom:1px solid white;
+	border-bottom-right-radius:8px;
+	background:#BF1722;
+	-webkit-transition: top .5s ease-out;
+    transition: top .5s ease-out;
+    z-index: 100;
+}
+
+.skiptocontent a:focus {
+	position:absolute;
+	left:0px;
+	top:0px;
+	outline-color:transparent;	
+	-webkit-transition: top .05s ease-in;
+    transition: top .05s ease-in;
+}
