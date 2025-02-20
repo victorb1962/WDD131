@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #b5b5b5;
+    --secondary-color: #000000;
+}
+
+.creditCardContainer {
+    display: grid;
+    grid-template-rows: 30px 210px 30px 30px;
+    grid-template-columns: 80px 310px 80px;
+    gap: 10px;
+}
+
+.cardFront, .cardBack {
+  background-color: var(--primary-color);
+  width: 390px;
+  height: 240px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 10px var(--secondary-color);
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: var(--secondary-color);
+}
+
+.cardFront {
+    padding: 20px 30px 0;
+    z-index: 2;
+}
+
+#frontform {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+#total {
+    font-weight: bold;
+    margin-top: 10px;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#card-image {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: end;
+}
+
+#cardNumberContainer, #cardHolderContainer,#expirationContainer, #total {
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+#cardNumberContainer {
+    grid-row: 2;
+    grid-column: 1/-1;
+}
+
+#cardNumber {
+    width: 322px;
+    grid-column: 1/-1;
+}
+
+#cardHolderContainer {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+#expirationContainer {
+    grid-column: 2;
+    grid-row: 3;    
+    align-items: center;
+}
+
+#expirationMonth,
+#expirationYear {
+    width: 22px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+#expiration {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardBack {
+    grid-row: 2;
+    grid-column: 2;
+    z-index: 1;
+}
+
+#backform {
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 2fr 2fr;
+}
+
+#cvc-cvv-container {
+    grid-row: 3;
+    grid-column: 2;
+    justify-self: end;
+    display: flex;
+    flex-direction: column; 
+    align-items: start; 
+}
+
+#grayBar {
+    background-color: var(--secondary-color);
+    height: 30px;
+    margin-top: 20px;
+    grid-row: 1;
+    grid-column: 1/ -1;
+}
+
+#cvc-cvv {
+    width: 35px;
+    margin-right: 20px;
+}
+
+#cardButton {
+    width: 70px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px var(--secondary-color);
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: var(--secondary-color);
+    grid-row: 4;
+    grid-column: 3;
+}
