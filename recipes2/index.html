@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap"></noscript>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recipes</title>
+    <meta name="description" content="Recipe Lists Website">
+    <meta name="author" content="Carson Meikle">
+    <link rel="stylesheet" href="recipes.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" type="module"></script>
+    <!-- https://carsonbm.github.io/wdd131/ -->
+
+    <meta property="og:title" content="Carson's Recipes">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Delicious recipes">
+    <meta property="og:image" content="https://images.immediate.co.uk/production/volatile/sites/30/2013/05/2022-09-23GFOWEBFamilyRecipes-OnePotGarlicChicken05875preview-d8a4a42.jpg?quality=90&webp=true&resize=300,272">
+    <meta property="og:url" content="https://carsonbm.github.io/wdd131/Week%209/recipes/index.html">
+    <meta name="twitter:image" content="./images/recipe-book.webp">
+</head>
+<body>
+    <header>
+        <div class="headerContatiner">
+            <img id="logo" src="./images/recipe-book.png" alt="Picutre of recipe book">
+            <h1>RECIPEBOOK</h1>
+        </div>
+    </header>
+
+    <main>
+        <!--Search bar and form at top of screen-->
+        <form id="searchForm">
+            <input type="text" id='searchBar' placeholder="Find a recipe">
+            <button id="searchButton" type="submit">
+                <img id='searchPic' src="./images/search.svg" alt="Search">
+            </button>
+        </form>
+
+        <!--Empty div to contain seperation bar-->
+        <div id="bar"></div>
+
+        <!--Div to contain recipes as they are loaded into the html.-->
+        <div id="randomRecipe"></div>
+    </main>
+
+    <footer>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="./images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="./images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="./images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+        <div class="iconCredit">
+            <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+        </div>
+    </footer>
+
+</body>
+</html>
