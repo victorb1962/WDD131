@@ -102,9 +102,9 @@ function init() {
 }
 init();
 
-// We have rendered a list of recipes for the following - to set up for filtering and rendering a list of recipes!
+// We have a list of recipes - to set up for filtering and rendering of the list.
 
-//Filter recipes by the serach query.
+// Filter recipes by the search field.
 function filter(query) {
     const filtered = filterFunction(query);
     // sort by name
@@ -112,7 +112,7 @@ function filter(query) {
     return sorted;
 }
 
-//Filter matching items from the search input in the name, desc, tag, or ingredient.
+// Filter matching items from the search field by the name, desc, tag, or ingredient.
 function filterFunction(query) {
     const filteredRecipes = recipes.filter(recipe => {
         const nameSearch = recipe.name.toLowerCase().includes(query);
